@@ -11,8 +11,8 @@ if __name__ == "__main__":
 
     SUBJECT = "107"
 
-    jpeg_path = fr"Shrimp\data\shrimp_ds\jpeg\shrimp_{SUBJECT}.jpg"
-    csv_path = fr"Shrimp\data\shrimp_ds\csv\shrimp_{SUBJECT}.csv"
+    jpeg_path = fr"data\shrimp_ds\jpeg\shrimp_{SUBJECT}.jpg"
+    csv_path = fr"data\shrimp_ds\csv\shrimp_{SUBJECT}.csv"
 
     jpeg = cv2.imread(jpeg_path)
     jpeg = cv2.resize(jpeg, dsize=(512, 512))

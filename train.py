@@ -3,7 +3,7 @@ import numpy as np
 from torch import nn
 from pathlib import Path
 from torchvision.transforms import v2, GaussianBlur
-from ShrimpEstimator.tools.tools import ShrimpDataset, ShrimpModelV1, ShrimpModelV2
+from tools.tools import ShrimpDataset, ShrimpModelV1, ShrimpModelV2
 from torch.utils.data import DataLoader
 from sklearn.model_selection import train_test_split
 

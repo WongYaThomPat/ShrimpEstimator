@@ -2,7 +2,7 @@ import os
 import ast
 import pandas as pd
 import numpy as np
-from ShrimpEstimator.prep.findratio import find_ratio
+from prep.findratio import find_ratio
 from scipy.integrate import quad
 
 # NOTE: Straight Shrimps estimates are trash
@@ -31,8 +31,8 @@ if __name__ == '__main__':
     os.system('cls')
 
     SUBJECT = '167'
-    IMG_PATH = fr'Shrimp\data\shrimp_ds\jpeg\shrimp_{SUBJECT}.jpg'
-    CSV_PATH = fr'Shrimp\data\shrimp_ds\csv\shrimp_{SUBJECT}.csv'
+    IMG_PATH = fr'data\shrimp_ds\jpeg\shrimp_{SUBJECT}.jpg'
+    CSV_PATH = fr'data\shrimp_ds\csv\shrimp_{SUBJECT}.csv'
     
     a = 512
 

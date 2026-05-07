@@ -1,8 +1,8 @@
 import os, cv2
-from ShrimpEstimator.tools.tools2 import *
-from ShrimpEstimator.prep.findratio import find_ratio
+from tools.tools2 import *
+from prep.findratio import find_ratio
 from scipy.optimize import linear_sum_assignment
-from ShrimpEstimator.shrimp_test import get_model, predict_single
+from shrimp_test import get_model, predict_single
 
 if __name__ == '__main__':
     os.system('cls')
@@ -10,7 +10,7 @@ if __name__ == '__main__':
     # PARAMS
     DEV = 'cpu'
     BASE_CH = 24
-    MODEL_PATH = fr"Shrimp\models\shrimp_model_v2_{BASE_CH}.pth"
+    MODEL_PATH = fr"models\shrimp_model_v2_{BASE_CH}.pth"
     V2 = True if 'v2' in MODEL_PATH else False
     CONF = 0.3
     MIN_DIST = 4
@@ -29,9 +29,9 @@ if __name__ == '__main__':
 
         heatmap = predict_single(model, SUBJECT, DEV, UNSEEN)
         if UNSEEN:
-            og_path = fr'Shrimp\data\validate_set\jpeg\shrimp_{SUBJECT}.jpg'
+            og_path = fr'data\validate_set\jpeg\shrimp_{SUBJECT}.jpg'
         else:
-            og_path = fr'Shrimp\data\shrimp_ds\jpeg\shrimp_{SUBJECT}.jpg'
+            og_path = fr'data\shrimp_ds\jpeg\shrimp_{SUBJECT}.jpg'
 
         og_img = cv2.imread(og_path, 1)
         og_img = cv2.resize(og_img, (512, 512))
@@ -112,7 +112,7 @@ if __name__ == '__main__':
             medape = df_matches[f'{m}_abs'].median() * 100
             print(f"{m.capitalize():<10} | {bias:>11.2f}% | {mape:>14.2f}% | {medape:>17.2f}%")
 
-        df_matches.to_csv(r'Shrimp\result\shrimp_detailed_results.csv', index=False)
+        df_matches.to_csv(r'result\shrimp_detailed_results.csv', index=False)
         print("="*50)
         print("Full results saved to 'shrimp_detailed_results.csv'")
     else:

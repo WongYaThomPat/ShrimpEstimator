@@ -25,5 +25,5 @@ def view_file(file_path):
 
 if __name__ == '__main__':
     # Paste your specific filename here
-    target = r'Shrimp\data\shrimp_ds\hm\shrimp_123.npy'
+    target = r'data\shrimp_ds\hm\shrimp_123.npy'
     view_file(target)

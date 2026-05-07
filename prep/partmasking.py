@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 os.system('cls' if os.name == 'nt' else 'clear')
 
 # --- CONFIG ---
-img_folder = r'Shrimp\data\feature_bundle\og'
-output_folder = r'Shrimp\data\feature_bundle\output_masks'
+img_folder = r'data\feature_bundle\og'
+output_folder = r'data\feature_bundle\output_masks'
 SIZE = (256, 256)
 
 if not os.path.exists(output_folder):

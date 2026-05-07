@@ -35,6 +35,6 @@ def find_ratio(img_path : str, net_d : float = 100, a : int = 512):
 if __name__ == '__main__':
     os.system('cls')
     NET_D = 100
-    path = r'Shrimp\data\shrimp_ds\jpeg\shrimp_014.jpg'
+    path = r'data\shrimp_ds\jpeg\shrimp_014.jpg'
     
     print(find_ratio(path, NET_D))

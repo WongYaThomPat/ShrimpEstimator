@@ -107,8 +107,8 @@ def group_parts(part_coords : dict, d : int = 512) -> list:
 
 
 def load_ground_truth(subject: str, unseen: bool, d: int = 512):
-    path = fr'Shrimp\data\validate_set\csv\shrimp_{subject}.csv' if unseen else \
-           fr'Shrimp\data\shrimp_ds\csv\shrimp_{subject}.csv'
+    path = fr'data\validate_set\csv\shrimp_{subject}.csv' if unseen else \
+           fr'data\shrimp_ds\csv\shrimp_{subject}.csv'
     
     df = pd.read_csv(path)
     gt_list = []

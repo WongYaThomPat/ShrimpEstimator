@@ -1,7 +1,7 @@
 import os, cv2
-from ShrimpEstimator.shrimp_test import get_model, predict_single
-from ShrimpEstimator.prep.findratio import find_ratio
-from ShrimpEstimator.tools.tools2 import *
+from shrimp_test import get_model, predict_single
+from prep.findratio import find_ratio
+from tools.tools2 import *
 
 if __name__ == '__main__':
     os.system('cls')
@@ -9,7 +9,7 @@ if __name__ == '__main__':
     SUBJECT = '002'
     DEV = 'cpu'
     BASE_CH = 32
-    MODEL_PATH = fr"Shrimp\models\shrimp_model_v2_{BASE_CH}.pth"
+    MODEL_PATH = fr"models\shrimp_model_v2_{BASE_CH}.pth"
     CONF = 0.3
     MIN_DIST = 4
     UNSEEN = True
@@ -20,9 +20,9 @@ if __name__ == '__main__':
 
     heatmap = predict_single(model, SUBJECT, DEV, UNSEEN)
     if UNSEEN:
-        og_path = fr'Shrimp\data\validate_set\jpeg\shrimp_{SUBJECT}.jpg'
+        og_path = fr'data\validate_set\jpeg\shrimp_{SUBJECT}.jpg'
     else:
-        og_path = fr'Shrimp\data\shrimp_ds\jpeg\shrimp_{SUBJECT}.jpg'
+        og_path = fr'data\shrimp_ds\jpeg\shrimp_{SUBJECT}.jpg'
 
     og_img = cv2.imread(og_path, 1)
     og_img = cv2.resize(og_img, (512, 512))

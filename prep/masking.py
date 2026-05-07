@@ -21,7 +21,7 @@ def draw_gaussian(heatmap, center, sigma, k_size):
 if __name__ == '__main__':
     os.system('cls' if os.name == 'nt' else 'clear')
 
-    BASE_PATH = r'Shrimp\data\shrimp_ds'
+    BASE_PATH = r'data\shrimp_ds'
     CSV_PATH = Path(os.path.join(BASE_PATH, 'csv'))
     HM_PATH = Path(os.path.join(BASE_PATH, 'hm'))
     HM_PATH.mkdir(parents=True, exist_ok=True)
